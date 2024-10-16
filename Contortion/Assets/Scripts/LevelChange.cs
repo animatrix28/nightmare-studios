@@ -21,6 +21,7 @@ public class LevelChange : MonoBehaviour
             {
                 SceneManager.LoadScene("PlayAgain");
             }
+            Debug.Log(currentLevel);
         }
     }
 
