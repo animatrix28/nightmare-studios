@@ -1289,6 +1289,7 @@ GameObject:
   - component: {fileID: 1153146856}
   - component: {fileID: 1153146857}
   - component: {fileID: 1153146858}
+  - component: {fileID: 1153146859}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1429,7 +1430,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06235ef5dfd824fa38794270eafe80ce, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1455,6 +1456,18 @@ MonoBehaviour:
   respawnTransform: {fileID: 1751761368}
   playAreaTransform: {fileID: 1223339468}
   movingblock_transform: {fileID: 1153761505}
+--- !u!114 &1153146859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153146852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d814edb9917494313abd28910d271c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1153761501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1939,7 @@ GameObject:
   - component: {fileID: 1705322008}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Untagged
+  m_TagString: Exit_Level_3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

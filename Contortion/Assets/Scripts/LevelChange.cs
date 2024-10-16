@@ -5,17 +5,36 @@ using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
  void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger");
+        
 
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Exit_Level_1")
         {
 
 
             SceneManager.LoadScene("Level_3");
         }
+
+         if(other.gameObject.tag == "Exit_Level_3")
+        {
+
+
+
+          
+            SceneManager.LoadScene("PlayAgain");
+        }
+    }
+
+    public void PlayAgain()
+    {
+
+
+        SceneManager.LoadScene("Level_1");
+
+
+
     }
 
 
