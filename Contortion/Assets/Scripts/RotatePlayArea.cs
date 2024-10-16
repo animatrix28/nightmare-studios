@@ -11,14 +11,10 @@ public class RotatePlayArea : MonoBehaviour
     public Rigidbody2D rb;
     public Transform player;
 
-
-
-    
-
     void Update()
     {
+        angleBefore = transform.eulerAngles.z;
 
-         angleBefore = transform.eulerAngles.z;
         if (Input.GetKeyDown(KeyCode.F) && !isRotating)
         {
             targetAngle = angleBefore - 90f; 
@@ -28,28 +24,22 @@ public class RotatePlayArea : MonoBehaviour
         if (isRotating)
         {
             RotateArea();
-     
         }
     }
 
     void RotateArea()
     {
-     
-        float step = rotationSpeed * Time.deltaTime;
-        
         Debug.Log(angleBefore);
+
+        float step = rotationSpeed * Time.deltaTime;
         float angle = Mathf.MoveTowardsAngle(angleBefore, targetAngle, step);
+
         transform.eulerAngles = new Vector3(0, 0, angle);
         // player.transform.eulerAngles = new Vector3(0, 0, 0);
-
    
         if (Mathf.Approximately(angle, targetAngle))
         {
             isRotating = false;
-          
         }
     }
-
-
-
 }

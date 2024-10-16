@@ -1,41 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
-    
- void OnTriggerEnter2D(Collider2D other)
+    public int currentLevel = 1;
+    public int totalLevels = 3;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        Debug.Log("Trigger");
 
-        if (other.gameObject.tag == "Exit_Level_1")
+        if (other.gameObject.tag == "Player")
         {
-
-
-            SceneManager.LoadScene("Level_3");
-        }
-
-         if(other.gameObject.tag == "Exit_Level_3")
-        {
-
-
-
-          
-            SceneManager.LoadScene("PlayAgain");
+            if (currentLevel < totalLevels)
+            {
+                currentLevel++;
+                string nextLevel = "Level_" + currentLevel;
+                SceneManager.LoadScene(nextLevel);
+            } else
+            {
+                SceneManager.LoadScene("PlayAgain");
+            }
+            Debug.Log(currentLevel);
         }
     }
 
     public void PlayAgain()
     {
-
-
         SceneManager.LoadScene("Level_1");
-
-
-
     }
-
-
 }
