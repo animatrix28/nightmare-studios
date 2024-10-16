@@ -1295,8 +1295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnTransform: {fileID: 1751761368}
   playAreaTransform: {fileID: 1223339468}
-  block1Transform: {fileID: 0}
-  block2Transform: {fileID: 0}
+  block1Transform: {fileID: 613493996}
+  block2Transform: {fileID: 93541371}
 --- !u!1 &1223339466
 GameObject:
   m_ObjectHideFlags: 0
