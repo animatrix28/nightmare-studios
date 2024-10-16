@@ -61,11 +61,8 @@ sysinfo.txt
 *.unitypackage
 *.app
 
-<<<<<<< HEAD
-=======
 .DS_Store
 
->>>>>>> Shaurya
 # Crashlytics generated file
 crashlytics-build.properties
 
