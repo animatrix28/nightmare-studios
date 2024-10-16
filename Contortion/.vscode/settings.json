@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "pair-prototype-nightmare-studios.sln"
+    "dotnet.defaultSolution": "Contortion.sln"
 }

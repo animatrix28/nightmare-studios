@@ -71,12 +71,12 @@ public class PlayerKiller : MonoBehaviour
     }
 
 
-    IEnumerator waitForDeath()
-    {
-        yield return new WaitForSeconds(1);
-        resetEverything();
+    // IEnumerator waitForDeath()
+    // {
+    //     yield return new WaitForSeconds(1);
+    //     resetEverything();
 
-    }
+    // }
 
     void resetEverything()
     {
