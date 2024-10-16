@@ -22,31 +22,31 @@ public class PlayerKillerLevel3 : MonoBehaviour
         movingblock_rot = movingblock_transform.eulerAngles;
     }
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Spikes")
-    //    {
-    //        resetEverything();
-    //    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Spikes")
+        {
+            resetEverything();
+        }
 
-    //    if (collision.gameObject.tag == "Crusher")
-    //    {
-    //        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-    //        Rigidbody2D crusherRb = collision.collider.attachedRigidbody;
+        if (collision.gameObject.tag == "Crusher")
+        {
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            Rigidbody2D crusherRb = collision.collider.attachedRigidbody;
 
-    //        float forceThreshold = 100f;
-    //        float crusherVelocityMagnitude = crusherRb.velocity.magnitude;
-    //        float collisionForce = crusherVelocityMagnitude * crusherRb.mass;
+            float forceThreshold = 100f;
+            float crusherVelocityMagnitude = crusherRb.velocity.magnitude;
+            float collisionForce = crusherVelocityMagnitude * crusherRb.mass;
 
-    //        Debug.Log("Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
+            Debug.Log("Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
 
-    //        if (collisionForce > forceThreshold && crusherVelocityMagnitude > 0)
-    //        {
-    //            Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
-    //            resetEverything();
-    //        }
-    //    }
-    //}
+            if (collisionForce > forceThreshold && crusherVelocityMagnitude > 0)
+            {
+                Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
+                resetEverything();
+            }
+        }
+    }
 
     void resetEverything()
     {
