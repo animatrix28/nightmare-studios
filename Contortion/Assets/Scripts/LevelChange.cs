@@ -17,7 +17,15 @@ public class LevelChange : MonoBehaviour
                 currentLevel++;
                 string nextLevel = "Level_" + currentLevel;
                 SceneManager.LoadScene(nextLevel);
+            } else
+            {
+                SceneManager.LoadScene("PlayAgain");
             }
         }
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("Level_1");
     }
 }
