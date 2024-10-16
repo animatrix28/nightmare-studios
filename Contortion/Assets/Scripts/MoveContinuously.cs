@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class moveContinuosly : MonoBehaviour
+public class MoveContinuously : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public float speed = 2f; // Speed of the square
     public float boundary = 0.5f; // Horizontal boundary for movement
     
     private Vector3 startPosition;
-
 
     void Start()
     {
@@ -22,8 +18,4 @@ public class moveContinuosly : MonoBehaviour
     {
         transform.position = new Vector3(Mathf.PingPong(Time.time * speed, boundary * 2) - boundary + startPosition.x, startPosition.y, startPosition.z);
     }
-
-
-
-
 }
