@@ -1452,9 +1452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecfaad83b48004c53b44d935977e086c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTransform: {fileID: 1751761368}
-  playAreaTransform: {fileID: 1223339468}
-  movingblock_transform: {fileID: 1153761505}
 --- !u!114 &1153146859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,7 +2068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 3
-  totalLevels: 3
+  totalLevels: 4
 --- !u!1 &1751761366
 GameObject:
   m_ObjectHideFlags: 0
