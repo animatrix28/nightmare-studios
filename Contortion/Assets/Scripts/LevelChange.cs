@@ -3,25 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
-    public int currentLevel = 1;
-    public int totalLevels = 3;
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger");
-
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            if (currentLevel < totalLevels)
-            {
-                currentLevel++;
-                string nextLevel = "Level_" + currentLevel;
-                SceneManager.LoadScene(nextLevel);
-            } else
-            {
-                SceneManager.LoadScene("PlayAgain");
-            }
-            Debug.Log(currentLevel);
+            ChangeLevel();
+        }
+    }
+
+    private void ChangeLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            string nextSceneName = $"Level_{nextSceneIndex + 1}";
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene("PlayAgain");
         }
     }
 

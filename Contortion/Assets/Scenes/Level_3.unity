@@ -1464,8 +1464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d814edb9917494313abd28910d271c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 3
-  totalLevels: 3
 --- !u!1 &1153761501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,7 +1868,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1735493, g: 0.19637366, b: 0.24528301, a: 1}
+  m_Color: {r: 0.13725491, g: 0.13725491, b: 0.20784314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2067,8 +2065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d814edb9917494313abd28910d271c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 3
-  totalLevels: 4
 --- !u!1 &1751761366
 GameObject:
   m_ObjectHideFlags: 0
