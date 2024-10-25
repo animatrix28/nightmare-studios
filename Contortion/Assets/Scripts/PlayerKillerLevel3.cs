@@ -19,11 +19,11 @@ public class PlayerKillerLevel3 : MonoBehaviour
             float crusherVelocityMagnitude = crusherRb.velocity.magnitude;
             float collisionForce = crusherVelocityMagnitude * crusherRb.mass;
 
-            Debug.Log("Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
+
 
             if (collisionForce > forceThreshold && crusherVelocityMagnitude > 0)
             {
-                Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
+
                 Respawn();
             }
         }

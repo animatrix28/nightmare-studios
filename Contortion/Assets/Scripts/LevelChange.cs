@@ -18,7 +18,7 @@ public class LevelChange : MonoBehaviour
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
-            Debug.Log("Total:" + SceneManager.sceneCountInBuildSettings + "Current Scene:" + currentSceneIndex );
+
             string nextSceneName = $"Level_{nextSceneIndex + 1}";
             SceneManager.LoadScene(nextSceneName);
         }
