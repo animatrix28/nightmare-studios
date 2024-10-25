@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayAgain.unity
     guid: 3a2d7151eb8d54471aa1c0deb15b6ad5
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 2388686eadb844aebb042bd1f72eef09
   m_configObjects: {}

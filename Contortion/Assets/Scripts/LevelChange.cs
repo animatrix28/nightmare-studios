@@ -32,4 +32,9 @@ public class LevelChange : MonoBehaviour
     {
         SceneManager.LoadScene("Level_1");
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Level_1");
+    }
 }
