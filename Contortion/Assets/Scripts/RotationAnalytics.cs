@@ -1,25 +1,15 @@
 using UnityEngine;
-using System.IO;
+using System;
+using System.Collections;
 using UnityEngine.SceneManagement;
+using Proyecto26; // Make sure RestClient is correctly imported
 
 public class RotationAnalytics : MonoBehaviour
 {
     private int rotationCount = 0;
-    private string analyticsFilePath;
-    public static event System.Action OnRotationStart;
-    void Start()
-    {
+    private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
 
-        string desktopPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop);
-        analyticsFilePath = desktopPath + "/RotationAnalytics.txt";
-
-
-        if (!File.Exists(analyticsFilePath))
-        {
-
-            File.WriteAllText(analyticsFilePath, "Total Rotation Count Log\n");
-        }
-    }
+    public static event Action OnRotationStart;
 
     void OnEnable()
     {
@@ -39,11 +29,31 @@ public class RotationAnalytics : MonoBehaviour
 
     private void LogFinalRotationCount()
     {
+        string levelName = SceneManager.GetActiveScene().name;
+        string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        using (StreamWriter writer = new StreamWriter(analyticsFilePath, true))
+        RotationData data = new RotationData
         {
-            string levelName = SceneManager.GetActiveScene().name;
-            writer.WriteLine($"Total rotations at end of level '{levelName}': {rotationCount} as of {System.DateTime.Now}");
-        }
+            level = levelName,
+            rotations = rotationCount,
+            date = timestamp
+        };
+
+        // Send data to Firebase using RestClient
+        RestClient.Post(firebaseURL, data).Then(response =>
+        {
+            Debug.Log("Data successfully sent to Firebase!");
+        }).Catch(error =>
+        {
+            Debug.LogError("Error sending data to Firebase: " + error);
+        });
+    }
+
+    [Serializable]
+    public class RotationData
+    {
+        public string level;
+        public int rotations;
+        public string date;
     }
 }
