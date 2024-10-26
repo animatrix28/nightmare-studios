@@ -3234,7 +3234,7 @@ GameObject:
   - component: {fileID: 1974557515}
   - component: {fileID: 1974557517}
   m_Layer: 0
-  m_Name: Gravity Powerup
+  m_Name: GravityToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

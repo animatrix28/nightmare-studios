@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GravityPowerup : MonoBehaviour
+public class GravityToggle : MonoBehaviour
 {
     public ReverseGravity[] gravityAffectedBlocks;
 
