@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using System.Collections;
 using UnityEngine.SceneManagement;
 using Proyecto26; // Make sure RestClient is correctly imported
 
@@ -8,8 +7,6 @@ public class RotationAnalytics : MonoBehaviour
 {
     private int rotationCount = 0;
     private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
-
-    public static event Action OnRotationStart;
 
     void OnEnable()
     {
