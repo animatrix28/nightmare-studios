@@ -33,7 +33,6 @@ public class PlayerKiller : MonoBehaviour
 =======
                 Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
                 StartCoroutine(RespawnWithDelay());
->>>>>>> Stashed changes
             }
         }
     }
