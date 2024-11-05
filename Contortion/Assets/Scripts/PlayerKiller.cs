@@ -14,6 +14,7 @@ public class PlayerKiller : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Crusher")
+        if (collision.gameObject.tag == "Crusher")
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             Rigidbody2D crusherRb = collision.collider.attachedRigidbody;

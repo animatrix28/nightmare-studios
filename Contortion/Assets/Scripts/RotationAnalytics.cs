@@ -53,14 +53,14 @@
 // }
 
 using UnityEngine;
-using UnityEngine.Analytics;
+using System;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+using Proyecto26; // Make sure RestClient is correctly imported
 
 public class RotationAnalytics : MonoBehaviour
 {
     private int rotationCount = 0;
-    public static event System.Action OnRotationStart;
+    private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
 
     void OnEnable()
     {
@@ -81,13 +81,30 @@ public class RotationAnalytics : MonoBehaviour
     private void LogFinalRotationCount()
     {
         string levelName = SceneManager.GetActiveScene().name;
-        AnalyticsResult result = Analytics.CustomEvent("rotation_data", new Dictionary<string, object>
-        {
-            { "level_name", levelName },
-            { "total_rotations", rotationCount },
-            { "timestamp", System.DateTime.Now.ToString() }
-        });
+        string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-        Debug.Log("Analytics result: " + result + " at level " + levelName + " with rotations: " + rotationCount);
+        RotationData data = new RotationData
+        {
+            level = levelName,
+            rotations = rotationCount,
+            date = timestamp
+        };
+
+        // Send data to Firebase using RestClient
+        RestClient.Post(firebaseURL, data).Then(response =>
+        {
+            Debug.Log("Data successfully sent to Firebase!");
+        }).Catch(error =>
+        {
+            Debug.LogError("Error sending data to Firebase: " + error);
+        });
+    }
+
+    [Serializable]
+    public class RotationData
+    {
+        public string level;
+        public int rotations;
+        public string date;
     }
 }
