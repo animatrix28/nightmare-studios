@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerKiller : MonoBehaviour
 {
+    public GameObject deathMessageUI;
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Spikes")
         {
-            Respawn();
+            StartCoroutine(RespawnWithDelay());
         }
 
         if (collision.gameObject.tag == "Crusher")
@@ -23,14 +26,25 @@ public class PlayerKiller : MonoBehaviour
 
             if (collisionForce > forceThreshold && crusherVelocityMagnitude > 0)
             {
+<<<<<<< Updated upstream
 
                 Respawn();
+=======
+                Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
+                StartCoroutine(RespawnWithDelay());
+>>>>>>> Stashed changes
             }
         }
     }
 
-    void Respawn()
+    IEnumerator RespawnWithDelay()
     {
+        Time.timeScale = 0;
+        deathMessageUI.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(2);
+        
+        Time.timeScale = 1;
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
