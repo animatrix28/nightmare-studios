@@ -14,7 +14,6 @@ public class PlayerKiller : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Crusher")
-        if (collision.gameObject.tag == "Crusher")
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             Rigidbody2D crusherRb = collision.collider.attachedRigidbody;
@@ -27,10 +26,6 @@ public class PlayerKiller : MonoBehaviour
 
             if (collisionForce > forceThreshold && crusherVelocityMagnitude > 0)
             {
-<<<<<<< Updated upstream
-
-                Respawn();
-=======
                 Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
                 StartCoroutine(RespawnWithDelay());
             }
