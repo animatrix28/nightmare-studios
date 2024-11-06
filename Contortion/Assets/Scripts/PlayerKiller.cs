@@ -37,9 +37,11 @@ public class PlayerKiller : MonoBehaviour
         Time.timeScale = 0;
         deathMessageUI.SetActive(true);
 
+
         yield return new WaitForSecondsRealtime(2);
-        
+
         Time.timeScale = 1;
+        deathMessageUI.SetActive(false);
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
