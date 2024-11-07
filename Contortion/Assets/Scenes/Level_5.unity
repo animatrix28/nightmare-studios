@@ -2770,7 +2770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6491aeae60105450ba9207c2233ad336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 200
+  rotationSpeed: 250
   rb: {fileID: 1153146857}
   player: {fileID: 1153146854}
 --- !u!1 &1488364042
@@ -4422,3 +4422,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1223339468}
   - {fileID: 2050636433}
+  - {fileID: 1100931714}
