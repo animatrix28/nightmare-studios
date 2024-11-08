@@ -3,7 +3,7 @@ using UnityEngine;
 public class RotatePlayArea : MonoBehaviour
 {
     public float rotationSpeed = 100f;
-    private bool isRotating = false;
+    public bool isRotating = false;
     private float targetAngle;
 
     private float angleBefore;

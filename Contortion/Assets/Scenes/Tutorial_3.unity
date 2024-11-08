@@ -1226,6 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e6025e9707c422388f1ca574d6eaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathMessageUI: {fileID: 0}
 --- !u!114 &1153146859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,7 +1360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6491aeae60105450ba9207c2233ad336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 200
+  rotationSpeed: 250
+  isRotating: 0
   rb: {fileID: 1153146857}
   player: {fileID: 1153146854}
 --- !u!1 &1400065761

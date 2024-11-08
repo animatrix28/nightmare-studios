@@ -1368,6 +1368,8 @@ MonoBehaviour:
   speed: 2
   boundary: 2.5
   moveAlongX: 1
+  r: {fileID: 0}
+  rotatePlayArea: {fileID: 0}
 --- !u!212 &1116893662
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1928,6 +1930,8 @@ MonoBehaviour:
   speed: 2
   boundary: 2
   moveAlongX: 1
+  r: {fileID: 0}
+  rotatePlayArea: {fileID: 0}
 --- !u!1 &1174647741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,7 +1960,7 @@ Transform:
   m_GameObject: {fileID: 1174647741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.11, y: -0.306, z: 0}
+  m_LocalPosition: {x: -0.11, y: -0.294, z: 0}
   m_LocalScale: {x: 0.3397092, y: 0.047314163, z: 0.13102566}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2120,7 +2124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.3, y: 194}
+  m_AnchoredPosition: {x: 85.1, y: 9.6}
   m_SizeDelta: {x: 262.1483, y: 62.8539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211308772
@@ -2170,8 +2174,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2333,6 +2337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 250
+  isRotating: 0
   rb: {fileID: 1153146857}
   player: {fileID: 1153146854}
 --- !u!1 &1705322005
