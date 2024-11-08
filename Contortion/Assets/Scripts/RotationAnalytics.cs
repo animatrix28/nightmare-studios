@@ -67,7 +67,7 @@ public class RotationAnalytics : MonoBehaviour
         RotatePlayArea.OnRotationStart += RotationStarted;
     }
 
-    void OnDisable()
+    void OnDestroy()
     {
         RotatePlayArea.OnRotationStart -= RotationStarted;
         LogFinalRotationCount();
