@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  boundary: 0.5
+  boundary: 2.5
   moveAlongX: 1
 --- !u!212 &1116893662
 SpriteRenderer:
