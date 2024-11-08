@@ -30,7 +30,7 @@ public class RotatePlayArea : MonoBehaviour
 
     void RotateArea()
     {
-        Debug.Log(angleBefore);
+
 
         float step = rotationSpeed * Time.deltaTime;
         float angle = Mathf.MoveTowardsAngle(angleBefore, targetAngle, step);

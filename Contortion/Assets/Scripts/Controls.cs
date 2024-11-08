@@ -12,7 +12,7 @@ public class Controls : MonoBehaviour
     {
         if (!controlsShown)
         {
-            StartCoroutine(ShowControls());
+            ShowControls();
             controlsShown = true;
         }
         else
@@ -25,15 +25,15 @@ public class Controls : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            StopCoroutine(ShowControls());
+            ShowControls();
             control_text.text = "";
         }
     }
 
-    IEnumerator ShowControls()
+    void ShowControls()
     {
         control_text.text = "F to flip\nA/S or Left/Right Arrow keys to move";
-        yield return new WaitForSeconds(3);
-        control_text.text = "";
+        // yield return new WaitForSeconds(3);
+        // control_text.text = "";
     }
 }
