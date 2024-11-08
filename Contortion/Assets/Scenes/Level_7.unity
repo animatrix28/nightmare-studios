@@ -3760,7 +3760,7 @@ GameObject:
   - component: {fileID: 1896890478}
   - component: {fileID: 1896890477}
   m_Layer: 0
-  m_Name: Stationary Kill 2 (1)
+  m_Name: Stationary Kill 7
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
