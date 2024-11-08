@@ -37,6 +37,10 @@ public class LevelChange : MonoBehaviour
 
     public void StartGame()
     {
+        SceneManager.LoadScene("Tutorial_1");
+    }
+    public void SkipTutorial()
+    {
         SceneManager.LoadScene("Level_1");
     }
 }
