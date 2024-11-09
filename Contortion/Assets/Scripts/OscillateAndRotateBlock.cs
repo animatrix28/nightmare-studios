@@ -9,7 +9,6 @@ public class OscillateAndRotateBlock : MonoBehaviour
     private Vector3 startPosition;
 
     public GameObject r;
-    private bool isFlipped = false; // Tracks if the block is flipped
     public RotatePlayArea rotatePlayArea;
     void Start()
     {
@@ -47,6 +46,5 @@ public class OscillateAndRotateBlock : MonoBehaviour
             Vector3 moveDirection = transform.TransformDirection(Vector3.right) * oscillation;
             transform.position = startPosition + moveDirection;
         }
-
     }
 }
