@@ -10,18 +10,9 @@ public class TogglePositionLock : MonoBehaviour
         FreezePosition();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            // Only unfreeze if currently frozen
-            UnfreezePosition();
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             FreezePosition();
         }
@@ -30,7 +21,7 @@ public class TogglePositionLock : MonoBehaviour
     void FreezePosition()
     {
         rb.constraints |= RigidbodyConstraints2D.FreezePositionX;
-        rb.constraints |= RigidbodyConstraints2D.FreezePositionY;
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 
     void UnfreezePosition()

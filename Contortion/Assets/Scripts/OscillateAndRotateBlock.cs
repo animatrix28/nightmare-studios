@@ -46,6 +46,5 @@ public class OscillateAndRotateBlock : MonoBehaviour
             Vector3 moveDirection = transform.TransformDirection(Vector3.right) * oscillation;
             transform.position = startPosition + moveDirection;
         }
-
     }
 }
