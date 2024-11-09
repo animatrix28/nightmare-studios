@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 93541374}
   - component: {fileID: 93541373}
   m_Layer: 0
-  m_Name: Stationary Kill 2
+  m_Name: Spike 2
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,8 +307,8 @@ Transform:
   m_GameObject: {fileID: 190888223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.196, y: 0.327, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalPosition: {x: -0.183, y: 0.342, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223339468}
@@ -349,7 +349,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.59, y: 0.57}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -399,7 +399,7 @@ SpriteRenderer:
   m_SortingLayerID: -1293654611
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f727d5a589d35334596083f7d61a99e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 274920226}
   - component: {fileID: 274920225}
   m_Layer: 0
-  m_Name: Stationary Kill 3
+  m_Name: Spike 5
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 362856800}
   - component: {fileID: 362856799}
   m_Layer: 0
-  m_Name: Stationary Kill 4
+  m_Name: Spike 6
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 418967974}
   - component: {fileID: 418967973}
   m_Layer: 0
-  m_Name: Stationary Kill 6
+  m_Name: Spike 4
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1642,7 +1642,7 @@ GameObject:
   - component: {fileID: 613493999}
   - component: {fileID: 613493998}
   m_Layer: 0
-  m_Name: Stationary Kill 1
+  m_Name: Spike 1
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2055,8 +2055,8 @@ Transform:
   m_GameObject: {fileID: 926320676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.327, y: -0.42, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalPosition: {x: 0.321, y: -0.418, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223339468}
@@ -2110,7 +2110,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.59, y: 0.57}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2160,7 +2160,7 @@ SpriteRenderer:
   m_SortingLayerID: -1293654611
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f727d5a589d35334596083f7d61a99e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2501,7 +2501,7 @@ GameObject:
   - component: {fileID: 1087980937}
   - component: {fileID: 1087980940}
   m_Layer: 0
-  m_Name: Bottom Kill
+  m_Name: Crusher 2
   m_TagString: Crusher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2992,7 +2992,7 @@ GameObject:
   - component: {fileID: 1177180500}
   - component: {fileID: 1177180499}
   m_Layer: 0
-  m_Name: Stationary Kill 5
+  m_Name: Spike 7
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3222,18 +3222,22 @@ Transform:
   m_Children:
   - {fileID: 1120042862}
   - {fileID: 2135936126}
+  - {fileID: 2127511767}
+  - {fileID: 1960454425}
   - {fileID: 1153146854}
   - {fileID: 758198526}
   - {fileID: 967655641}
   - {fileID: 1488364043}
   - {fileID: 2035526149}
   - {fileID: 1492954174}
-  - {fileID: 1067193247}
   - {fileID: 1991321783}
   - {fileID: 486460005}
   - {fileID: 310875592}
+  - {fileID: 1067193247}
   - {fileID: 277317991}
   - {fileID: 1366867293}
+  - {fileID: 1917957712}
+  - {fileID: 1087980935}
   - {fileID: 613493996}
   - {fileID: 93541371}
   - {fileID: 1896890476}
@@ -3241,10 +3245,6 @@ Transform:
   - {fileID: 274920224}
   - {fileID: 362856798}
   - {fileID: 1177180498}
-  - {fileID: 1917957712}
-  - {fileID: 1087980935}
-  - {fileID: 2127511767}
-  - {fileID: 1960454425}
   - {fileID: 1705322007}
   - {fileID: 926320677}
   - {fileID: 190888224}
@@ -3998,7 +3998,7 @@ GameObject:
   - component: {fileID: 1896890478}
   - component: {fileID: 1896890477}
   m_Layer: 0
-  m_Name: Stationary Kill 7
+  m_Name: Spike 3
   m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4157,7 +4157,7 @@ GameObject:
   - component: {fileID: 1917957714}
   - component: {fileID: 1917957717}
   m_Layer: 0
-  m_Name: Top Kill
+  m_Name: Crusher 1
   m_TagString: Crusher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
