@@ -61,6 +61,8 @@ public class RotationAnalytics : MonoBehaviour
 {
     private int rotationCount = 0;
     private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
+    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsTESTING.json";
+    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsVersion1.json";
 
     void OnEnable()
     {
@@ -84,6 +86,7 @@ public class RotationAnalytics : MonoBehaviour
         string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         string causeOfDeath = PlayerKiller.CauseOfDeath;
         string levelStatus = LevelChange.LevelStatus;
+
         RotationData data = new RotationData
         {
             level = levelName,
@@ -93,11 +96,14 @@ public class RotationAnalytics : MonoBehaviour
             levelStatus = levelStatus
         };
 
+
         Debug.Log(levelStatus + "Analytics");
         // Send data to Firebase using RestClient
         RestClient.Post(firebaseURL, data).Then(response =>
         {
             Debug.Log("Data successfully sent to Firebase!");
+            LevelChange.LevelStatus = "Unknown";
+            PlayerKiller.CauseOfDeath = "Unknown";
         }).Catch(error =>
         {
             Debug.LogError("Error sending data to Firebase: " + error);
