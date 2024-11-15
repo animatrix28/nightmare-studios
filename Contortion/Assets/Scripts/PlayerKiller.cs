@@ -6,10 +6,14 @@ using System.Collections;
 public class PlayerKiller : MonoBehaviour
 {
     public GameObject deathMessageUI;
+    public static string CauseOfDeath = "Unknown";
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Spikes")
         {
+            Debug.Log("Death Cause: Spikes");
+            CauseOfDeath = "Spikes";
             StartCoroutine(RespawnWithDelay());
         }
 
@@ -26,7 +30,9 @@ public class PlayerKiller : MonoBehaviour
 
             if (collisionForce > forceThreshold && crusherVelocityMagnitude > 0)
             {
+                Debug.Log("Death Cause: Crusher");
                 Debug.Log("High force collision detected with Crusher. Force: " + collisionForce + "Vel:" + crusherVelocityMagnitude);
+                CauseOfDeath = "Crusher";
                 StartCoroutine(RespawnWithDelay());
             }
         }
