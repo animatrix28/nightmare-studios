@@ -3,14 +3,14 @@ using UnityEngine;
 public class GravityToggle : MonoBehaviour
 {
     public ReverseGravity[] gravityAffectedBlocks;
-    public static string IsPowerUpUsed = "Not Exist";
+    public static string IsPowerUpUsed = "Not Used";
     public static bool IsPowerUpPresent = false;
     void Start()
     {
         // IsPowerUpPresent = true;
         // IsPowerUpUsed = "Not Used";
         IsPowerUpPresent = PlayerPrefs.GetInt("IsPowerUpPresent", 0) == 1;
-        IsPowerUpUsed = PlayerPrefs.GetString("IsPowerUpUsed", "Not Exist");
+        IsPowerUpUsed = PlayerPrefs.GetString("IsPowerUpUsed", "Not Used");
 
         // Update state for this instance
         IsPowerUpPresent = true;
