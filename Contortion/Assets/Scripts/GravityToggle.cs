@@ -7,8 +7,15 @@ public class GravityToggle : MonoBehaviour
     public static bool IsPowerUpPresent = false;
     void Start()
     {
+        // IsPowerUpPresent = true;
+        // IsPowerUpUsed = "Not Used";
+        IsPowerUpPresent = PlayerPrefs.GetInt("IsPowerUpPresent", 0) == 1;
+        IsPowerUpUsed = PlayerPrefs.GetString("IsPowerUpUsed", "Not Exist");
+
+        // Update state for this instance
         IsPowerUpPresent = true;
         IsPowerUpUsed = "Not Used";
+        SaveState();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,7 +29,14 @@ public class GravityToggle : MonoBehaviour
                     block.ReverseObjectGravity();
                 }
             }
+            SaveState();
             Destroy(gameObject);
         }
+    }
+    private void SaveState()
+    {
+        PlayerPrefs.SetInt("IsPowerUpPresent", IsPowerUpPresent ? 1 : 0);
+        PlayerPrefs.SetString("IsPowerUpUsed", IsPowerUpUsed);
+        PlayerPrefs.Save();
     }
 }
