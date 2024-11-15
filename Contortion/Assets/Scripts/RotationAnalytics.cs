@@ -60,11 +60,11 @@ using Proyecto26; // Make sure RestClient is correctly imported
 public class RotationAnalytics : MonoBehaviour
 {
     private int rotationCount = 0;
-    private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
+    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
     // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsTESTING.json";
 
     //UNCOMMENT THIS WHEN BUILDING
-    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsVersion1.json";
+     private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsVersion1.json";
 
     void OnEnable()
     {
@@ -88,6 +88,8 @@ public class RotationAnalytics : MonoBehaviour
         string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         string causeOfDeath = PlayerKiller.CauseOfDeath;
         string levelStatus = LevelChange.LevelStatus;
+        // string gravityToggleUsed = GravityToggle.IsPowerUpUsed;
+        string gravityToggleUsed = GravityToggle.IsPowerUpPresent ? GravityToggle.IsPowerUpUsed :"Not Exist";
 
         RotationData data = new RotationData
         {
@@ -95,7 +97,8 @@ public class RotationAnalytics : MonoBehaviour
             rotations = rotationCount,
             date = timestamp,
             causeOfDeath = causeOfDeath,
-            levelStatus = levelStatus
+            levelStatus = levelStatus,
+            gravityToggleUsed = gravityToggleUsed
         };
 
         // Debug.Log(causeOfDeath+"Analytics");
@@ -105,6 +108,8 @@ public class RotationAnalytics : MonoBehaviour
             Debug.Log("Data successfully sent to Firebase!");
             LevelChange.LevelStatus = "Unknown";
             PlayerKiller.CauseOfDeath = "Unknown";
+            GravityToggle.IsPowerUpUsed = "Not Exist";
+            GravityToggle.IsPowerUpPresent = false;
         }).Catch(error =>
         {
             Debug.LogError("Error sending data to Firebase: " + error);
@@ -119,5 +124,6 @@ public class RotationAnalytics : MonoBehaviour
         public string date;
         public string causeOfDeath;
         public string levelStatus;
+        public string gravityToggleUsed;
     }
 }
