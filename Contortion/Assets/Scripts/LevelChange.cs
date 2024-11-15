@@ -32,7 +32,7 @@ public class LevelChange : MonoBehaviour
         {
             string nextSceneName = $"Level_{currentSceneIndex - 2}";
             Debug.Log(currentSceneIndex);
-            LevelStatus = $"Level_{currentSceneIndex - 3}"+"_cleared";
+            LevelStatus = $"Level_{currentSceneIndex - 3}" + "_cleared";
             SceneManager.LoadScene(nextSceneName);
 
         }

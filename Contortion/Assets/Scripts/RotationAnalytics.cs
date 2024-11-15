@@ -98,8 +98,7 @@ public class RotationAnalytics : MonoBehaviour
             levelStatus = levelStatus
         };
 
-
-        Debug.Log(levelStatus + "Analytics");
+        // Debug.Log(causeOfDeath+"Analytics");
         // Send data to Firebase using RestClient
         RestClient.Post(firebaseURL, data).Then(response =>
         {
