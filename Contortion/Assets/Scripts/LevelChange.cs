@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
+    public static string LevelStatus = "Unknown";
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -23,6 +24,7 @@ public class LevelChange : MonoBehaviour
 
             string nextSceneName = $"Tutorial_{currentSceneIndex + 1}";
             // Debug.Log(nextSceneIndex);
+            LevelStatus = "Unknown";
             SceneManager.LoadScene(nextSceneName);
         }
         // else if (currentSceneIndex < SceneManager.sceneCountInBuildSettings - 1)
@@ -30,12 +32,13 @@ public class LevelChange : MonoBehaviour
         {
             string nextSceneName = $"Level_{currentSceneIndex - 2}";
             Debug.Log(currentSceneIndex);
+            LevelStatus = $"Level_{currentSceneIndex - 3}"+"_cleared";
             SceneManager.LoadScene(nextSceneName);
 
         }
         else
         {
-
+            LevelStatus = "Level_6_cleared";
             SceneManager.LoadScene("PlayAgain");
         }
     }

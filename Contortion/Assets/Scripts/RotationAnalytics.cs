@@ -83,15 +83,17 @@ public class RotationAnalytics : MonoBehaviour
         string levelName = SceneManager.GetActiveScene().name;
         string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         string causeOfDeath = PlayerKiller.CauseOfDeath;
+        string levelStatus = LevelChange.LevelStatus;
         RotationData data = new RotationData
         {
             level = levelName,
             rotations = rotationCount,
             date = timestamp,
-            causeOfDeath = causeOfDeath
+            causeOfDeath = causeOfDeath,
+            levelStatus = levelStatus
         };
-        
-        Debug.Log(causeOfDeath+"Analytics");
+
+        Debug.Log(levelStatus + "Analytics");
         // Send data to Firebase using RestClient
         RestClient.Post(firebaseURL, data).Then(response =>
         {
@@ -109,5 +111,6 @@ public class RotationAnalytics : MonoBehaviour
         public int rotations;
         public string date;
         public string causeOfDeath;
+        public string levelStatus;
     }
 }
