@@ -1910,7 +1910,6 @@ GameObject:
   - component: {fileID: 1087980938}
   - component: {fileID: 1087980937}
   - component: {fileID: 1087980940}
-  - component: {fileID: 1087980941}
   m_Layer: 0
   m_Name: Crusher 2
   m_TagString: Crusher
@@ -2067,18 +2066,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9ff097497bf9e842a922b9fb94ffd06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1087980941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087980934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1100931710
@@ -3640,7 +3627,6 @@ GameObject:
   - component: {fileID: 1917957715}
   - component: {fileID: 1917957714}
   - component: {fileID: 1917957717}
-  - component: {fileID: 1917957718}
   m_Layer: 0
   m_Name: Crusher 1
   m_TagString: Crusher
@@ -3797,18 +3783,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9ff097497bf9e842a922b9fb94ffd06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1917957718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917957711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1960454422
