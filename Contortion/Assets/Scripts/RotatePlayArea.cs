@@ -11,6 +11,7 @@ public class RotatePlayArea : MonoBehaviour
     public Rigidbody2D rb;
     public Transform player;
     public static event System.Action OnRotationStart;
+
     void Update()
     {
         angleBefore = transform.eulerAngles.z;
@@ -30,13 +31,11 @@ public class RotatePlayArea : MonoBehaviour
 
     void RotateArea()
     {
-
-
         float step = rotationSpeed * Time.deltaTime;
         float angle = Mathf.MoveTowardsAngle(angleBefore, targetAngle, step);
 
         transform.eulerAngles = new Vector3(0, 0, angle);
-        // player.transform.eulerAngles = new Vector3(0, 0, 0);
+        player.Rotate(Vector3.back * (angle - angleBefore));
 
         if (Mathf.Approximately(angle, targetAngle))
         {

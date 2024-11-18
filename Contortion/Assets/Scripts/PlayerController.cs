@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         float move = Input.GetAxis("Horizontal");
-        Vector2 movement = new Vector2(move * speed, rb.velocity.y);
-        rb.velocity = movement;
+        rb.velocity = new Vector2(move * speed, rb.velocity.y);
     }
 }
