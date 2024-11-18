@@ -154,7 +154,7 @@ public class PlayerKiller : MonoBehaviour
         {
             float crusherVelocity = Mathf.Abs(crusherRb.velocity.x);
             Debug.Log($"Crusher absolute velocity: {crusherVelocity}");
-            return crusherVelocity >= minCrusherVelocity;
+            return crusherVelocity >= minCrusherVelocity; //returns true 
         }
 
         return false;
@@ -261,7 +261,7 @@ public class PlayerKiller : MonoBehaviour
             float elapsedTime = 0f;
             Vector3 startPosition = mainCamera.transform.position;
             float startSize = mainCamera.orthographicSize;
-            Vector3 targetPosition = new Vector3(deathPosition.x, deathPosition.y, mainCamera.transform.position.z);
+            Vector3 targetPosition = new Vector3(deathPosition.x, deathPosition.y, mainCamera.transform.position.z); //keep camera's original z
             float targetSize = originalCameraSize / zoomAmount;
 
             while (elapsedTime < 1f)
