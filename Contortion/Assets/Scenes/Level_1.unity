@@ -370,7 +370,6 @@ GameObject:
   - component: {fileID: 256719373}
   - component: {fileID: 256719372}
   - component: {fileID: 256719371}
-  - component: {fileID: 256719370}
   m_Layer: 0
   m_Name: Crusher 2
   m_TagString: Crusher
@@ -393,20 +392,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1223339468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &256719370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256719368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatePlayArea: {fileID: 1223339469}
-  r: {fileID: 256719368}
 --- !u!61 &256719371
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1080,7 +1065,7 @@ GameObject:
   - component: {fileID: 758198528}
   m_Layer: 0
   m_Name: Platform 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1239,7 +1224,7 @@ GameObject:
   - component: {fileID: 983539954}
   m_Layer: 0
   m_Name: Platform 3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1541,7 +1526,7 @@ GameObject:
   - component: {fileID: 1123441324}
   m_Layer: 0
   m_Name: Platform 2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1865,6 +1850,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathMessageUI: {fileID: 250175910}
+  topSensor: {fileID: 0}
+  bottomSensor: {fileID: 0}
+  leftSensor: {fileID: 0}
+  rightSensor: {fileID: 0}
+  minCrusherVelocity: 2.5
 --- !u!114 &1153146859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1901,7 +1891,6 @@ GameObject:
   - component: {fileID: 1153761504}
   - component: {fileID: 1153761503}
   - component: {fileID: 1153761502}
-  - component: {fileID: 1153761506}
   m_Layer: 0
   m_Name: Crusher 1
   m_TagString: Crusher
@@ -2042,26 +2031,12 @@ Transform:
   m_GameObject: {fileID: 1153761501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.344, y: -0.423, z: 0}
+  m_LocalPosition: {x: 0.256, y: -0.423, z: 0}
   m_LocalScale: {x: 0.1567485, y: 0.07629705, z: 0.13102566}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223339468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1153761506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153761501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotatePlayArea: {fileID: 1223339469}
-  r: {fileID: 1153761501}
 --- !u!1 &1223339466
 GameObject:
   m_ObjectHideFlags: 0
