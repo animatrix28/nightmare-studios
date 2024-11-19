@@ -10,53 +10,29 @@ public class TogglePositionLock : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Attempt to get RotatePlayArea from the parent of `r`
         if (r != null)
         {
             rotatePlayArea = r.GetComponentInParent<RotatePlayArea>();
         }
 
-        if (rotatePlayArea == null)
+        if (rotatePlayArea)
         {
-            Debug.LogError("RotatePlayArea component not found on the parent of the assigned GameObject.");
-        }
-        else
-        {
-            FreezePosition();
+            rb.constraints = RigidbodyConstraints2D.None;
         }
     }
-
 
     void Update()
     {
-
-        if (rotatePlayArea.isRotating)
+        if (rotatePlayArea != null)
         {
-
-            UnfreezePosition();
-
+            if (rotatePlayArea.isRotating)
+            {
+                rb.constraints = RigidbodyConstraints2D.None;
+            }
+            else if (rb.velocity.magnitude < 0.1f)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
         }
-
-
-
-    }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            FreezePosition();
-        }
-    }
-
-    void FreezePosition()
-    {
-        rb.constraints |= RigidbodyConstraints2D.FreezePositionX;
-        rb.constraints |= RigidbodyConstraints2D.FreezePositionY;
-    }
-
-    void UnfreezePosition()
-    {
-        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
-        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
     }
 }
