@@ -27,22 +27,12 @@ public class TogglePositionLock : MonoBehaviour
         {
             if (rotatePlayArea.isRotating)
             {
-                UnfreezePosition();
+                rb.constraints = RigidbodyConstraints2D.None;
             }
             else if (rb.velocity.magnitude < 0.1f)
             {
-                FreezePosition();
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
         }
-    }
-
-    void FreezePosition()
-    {
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-    }
-
-    void UnfreezePosition()
-    {
-        rb.constraints = RigidbodyConstraints2D.None;
     }
 }
