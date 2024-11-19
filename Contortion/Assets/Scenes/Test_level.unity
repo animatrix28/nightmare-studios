@@ -2816,6 +2816,7 @@ MonoBehaviour:
   rotationSpeed: 250
   isRotating: 0
   rb: {fileID: 1153146857}
+  flag: {fileID: 1705322007}
   player: {fileID: 1153146854}
 --- !u!1 &1489473343
 GameObject:
