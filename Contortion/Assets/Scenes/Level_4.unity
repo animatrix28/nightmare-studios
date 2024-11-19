@@ -1417,6 +1417,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathMessageUI: {fileID: 2112496194}
+  topSensor: {fileID: 0}
+  bottomSensor: {fileID: 0}
+  leftSensor: {fileID: 0}
+  rightSensor: {fileID: 0}
+  minCrusherVelocity: 2
+  zoomAmount: 4
+  zoomSpeed: 2
 --- !u!114 &1153146859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,7 +1724,7 @@ Transform:
   m_GameObject: {fileID: 1705322005}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4332, y: -0.4074, z: 0}
+  m_LocalPosition: {x: 0.4239, y: -0.405, z: 0}
   m_LocalScale: {x: 0.10469012, y: 0.10601531, z: 0.10469012}
   m_ConstrainProportionsScale: 0
   m_Children:
