@@ -2201,7 +2201,7 @@ GameObject:
   - component: {fileID: 277317992}
   m_Layer: 0
   m_Name: Platform 10
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2274,7 +2274,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277317990}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2359,7 +2359,7 @@ GameObject:
   - component: {fileID: 310875593}
   m_Layer: 0
   m_Name: Platform 8
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2432,7 +2432,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310875591}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3757,7 +3757,7 @@ GameObject:
   - component: {fileID: 486460006}
   m_Layer: 0
   m_Name: Platform 7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3830,7 +3830,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486460004}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5714,7 +5714,7 @@ GameObject:
   - component: {fileID: 758198528}
   m_Layer: 0
   m_Name: Platform 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5787,7 +5787,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758198525}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7014,7 +7014,7 @@ GameObject:
   - component: {fileID: 967655642}
   m_Layer: 0
   m_Name: Platform 2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7087,7 +7087,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967655640}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7376,7 +7376,7 @@ GameObject:
   - component: {fileID: 1067193248}
   m_Layer: 0
   m_Name: Platform 9
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7449,7 +7449,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067193246}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7532,6 +7532,7 @@ GameObject:
   - component: {fileID: 1087980939}
   - component: {fileID: 1087980938}
   - component: {fileID: 1087980937}
+  - component: {fileID: 1087980940}
   m_Layer: 0
   m_Name: Crusher 2
   m_TagString: Crusher
@@ -7586,7 +7587,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.007279575, y: -0.0062646866}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7597,7 +7598,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0291182, y: 1.0375867}
   m_EdgeRadius: 0
 --- !u!50 &1087980938
 Rigidbody2D:
@@ -7611,7 +7612,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 2000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.1
@@ -8019,6 +8020,7 @@ GameObject:
   - component: {fileID: 1120042862}
   - component: {fileID: 1120042861}
   - component: {fileID: 1120042860}
+  - component: {fileID: 1120042863}
   m_Layer: 3
   m_Name: WallRight
   m_TagString: Ground
@@ -8380,6 +8382,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathMessageUI: {fileID: 1799010558}
+  topSensor: {fileID: 0}
+  bottomSensor: {fileID: 0}
+  leftSensor: {fileID: 0}
+  rightSensor: {fileID: 0}
+  minCrusherVelocity: 2
+  zoomAmount: 4
+  zoomSpeed: 2
 --- !u!114 &1153146859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8836,6 +8845,7 @@ MonoBehaviour:
   rotationSpeed: 250
   isRotating: 0
   rb: {fileID: 1153146857}
+  flag: {fileID: 1936401995}
   player: {fileID: 1153146854}
 --- !u!1 &1236858074
 GameObject:
@@ -9641,7 +9651,7 @@ GameObject:
   - component: {fileID: 1366867294}
   m_Layer: 0
   m_Name: Platform 11
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9714,7 +9724,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366867292}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -9957,7 +9967,7 @@ GameObject:
   - component: {fileID: 1488364044}
   m_Layer: 0
   m_Name: Platform 3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10030,7 +10040,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488364042}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10115,7 +10125,7 @@ GameObject:
   - component: {fileID: 1492954175}
   m_Layer: 0
   m_Name: Platform 5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10188,7 +10198,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492954173}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -11730,6 +11740,7 @@ GameObject:
   - component: {fileID: 1705322006}
   - component: {fileID: 1705322008}
   - component: {fileID: 1705322009}
+  - component: {fileID: 1705322010}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -11801,7 +11812,8 @@ Transform:
   m_LocalPosition: {x: 0.4261, y: 0.4133, z: 0}
   m_LocalScale: {x: 0.10469012, y: 0.10601531, z: 0.10469012}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1936401995}
   m_Father: {fileID: 1223339468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1705322008
@@ -12988,6 +13000,7 @@ GameObject:
   - component: {fileID: 1917957716}
   - component: {fileID: 1917957715}
   - component: {fileID: 1917957714}
+  - component: {fileID: 1917957717}
   m_Layer: 0
   m_Name: Crusher 1
   m_TagString: Crusher
@@ -13067,7 +13080,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 200
+  m_Mass: 2000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.1
@@ -13559,6 +13572,7 @@ GameObject:
   - component: {fileID: 1960454425}
   - component: {fileID: 1960454424}
   - component: {fileID: 1960454423}
+  - component: {fileID: 1960454426}
   m_Layer: 0
   m_Name: WallBottom
   m_TagString: Ground
@@ -13877,7 +13891,7 @@ GameObject:
   - component: {fileID: 1991321784}
   m_Layer: 0
   m_Name: Platform 6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13950,7 +13964,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991321782}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -14035,7 +14049,7 @@ GameObject:
   - component: {fileID: 2035526150}
   m_Layer: 0
   m_Name: Platform 4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14108,7 +14122,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035526148}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -14294,6 +14308,7 @@ GameObject:
   - component: {fileID: 2127511767}
   - component: {fileID: 2127511766}
   - component: {fileID: 2127511765}
+  - component: {fileID: 2127511768}
   m_Layer: 0
   m_Name: WallTop
   m_TagString: Ground
@@ -14413,6 +14428,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1223339468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2127511768
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127511764}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2135936123
 GameObject:
   m_ObjectHideFlags: 0
@@ -14424,6 +14466,7 @@ GameObject:
   - component: {fileID: 2135936126}
   - component: {fileID: 2135936125}
   - component: {fileID: 2135936124}
+  - component: {fileID: 2135936127}
   m_Layer: 0
   m_Name: WallLeft
   m_TagString: Ground

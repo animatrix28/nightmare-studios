@@ -61,10 +61,11 @@ public class RotationAnalytics : MonoBehaviour
 {
     private int rotationCount = 0;
     // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalytics.json";
-    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsTESTING.json";
+    //private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsTESTING.json";
 
-    //UNCOMMENT THIS WHEN BUILDING
-     private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsVersion1.json";
+    // //UNCOMMENT THIS WHEN BUILDING
+    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsVersion1.json";
+    private string firebaseURL = ""; // testing locally
 
     void OnEnable()
     {
@@ -89,7 +90,8 @@ public class RotationAnalytics : MonoBehaviour
         string causeOfDeath = PlayerKiller.CauseOfDeath;
         string levelStatus = LevelChange.LevelStatus;
         // string gravityToggleUsed = GravityToggle.IsPowerUpUsed;
-        string gravityToggleUsed = GravityToggle.IsPowerUpPresent ? GravityToggle.IsPowerUpUsed :"Not Exist";
+        // string gravityToggleUsed = GravityToggle.IsPowerUpPresent ? GravityToggle.IsPowerUpUsed :"Not Exist";
+        string gravityToggleUsed = PlayerPrefs.GetString("IsPowerUpUsed", "Not Exist");
 
         RotationData data = new RotationData
         {
@@ -108,8 +110,11 @@ public class RotationAnalytics : MonoBehaviour
             Debug.Log("Data successfully sent to Firebase!");
             LevelChange.LevelStatus = "Unknown";
             PlayerKiller.CauseOfDeath = "Unknown";
-            GravityToggle.IsPowerUpUsed = "Not Exist";
-            GravityToggle.IsPowerUpPresent = false;
+            // GravityToggle.IsPowerUpUsed = "Not Exist";
+            // GravityToggle.IsPowerUpPresent = false;
+            PlayerPrefs.SetString("IsPowerUpUsed", "Not Exist");
+            PlayerPrefs.SetInt("IsPowerUpPresent", 0);
+            PlayerPrefs.Save();
         }).Catch(error =>
         {
             Debug.LogError("Error sending data to Firebase: " + error);
