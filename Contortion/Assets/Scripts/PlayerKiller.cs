@@ -125,7 +125,6 @@ public class PlayerKiller : MonoBehaviour
             Debug.Log($"Crusher absolute vertical velocity: {crusherVelocity}");
             return crusherVelocity >= minCrusherVelocity;
         }
-
         return false;
     }
 
@@ -156,7 +155,6 @@ public class PlayerKiller : MonoBehaviour
             Debug.Log($"Crusher absolute velocity: {crusherVelocity}");
             return crusherVelocity >= minCrusherVelocity; //returns true 
         }
-
         return false;
     }
 
@@ -255,13 +253,12 @@ public class PlayerKiller : MonoBehaviour
         Time.timeScale = 0;
         deathMessageUI.SetActive(true);
 
-        // Camera zoom
         if (mainCamera != null)
         {
             float elapsedTime = 0f;
             Vector3 startPosition = mainCamera.transform.position;
             float startSize = mainCamera.orthographicSize;
-            Vector3 targetPosition = new Vector3(deathPosition.x, deathPosition.y, mainCamera.transform.position.z); //keep camera's original z
+            Vector3 targetPosition = new Vector3(deathPosition.x, deathPosition.y, mainCamera.transform.position.z);
             float targetSize = originalCameraSize / zoomAmount;
 
             while (elapsedTime < 1f)
@@ -276,17 +273,27 @@ public class PlayerKiller : MonoBehaviour
             }
         }
 
-        yield return new WaitForSecondsRealtime(5);
+        float waitTime = 5f;
+        float elapsedWait = 0f;
+        while (elapsedWait < waitTime)
+        {
+            if (Input.GetKeyDown(KeyCode.Return)) 
+            {
+                break;
+            }
+            elapsedWait += Time.unscaledDeltaTime;
+            yield return null;
+        }
 
-        // Reset camera
         if (mainCamera != null)
         {
             mainCamera.transform.position = originalCameraPosition;
             mainCamera.orthographicSize = originalCameraSize;
         }
 
-        Time.timeScale = 1;
         deathMessageUI.SetActive(false);
+        Time.timeScale = 1;
+
         RestartGame();
         isRespawning = false;
     }
@@ -294,6 +301,12 @@ public class PlayerKiller : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1;
+
+        if (playerRigidbody != null)
+        {
+            playerRigidbody.velocity = Vector2.zero;
+        }
+
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }

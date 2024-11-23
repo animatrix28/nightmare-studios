@@ -18,7 +18,6 @@ public class LevelChange : MonoBehaviour
         int nextSceneIndex = currentSceneIndex + 1;
         // Debug.Log(currentSceneIndex+"wefwbijuwbi");
 
-
         if (currentSceneIndex < 3)
         {
 
