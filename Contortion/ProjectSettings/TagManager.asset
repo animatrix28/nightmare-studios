@@ -49,3 +49,9 @@ TagManager:
   - name: Teleportation Portals
     uniqueID: 3001312685
     locked: 0
+  - name: Player
+    uniqueID: 1981200531
+    locked: 0
+  - name: Death Text
+    uniqueID: 1235440073
+    locked: 0

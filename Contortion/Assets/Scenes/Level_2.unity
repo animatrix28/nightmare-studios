@@ -4731,8 +4731,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1293654611
-  m_SortingLayer: 1
+  m_SortingLayerID: 1981200531
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 34587324d412940a79d530020c957dc0, type: 3}
   m_Color: {r: 0.085395135, g: 0.8862745, b: 0.9528302, a: 1}
@@ -6809,7 +6809,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1235440073
   m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1414835813
@@ -9304,8 +9304,8 @@ GameObject:
   - component: {fileID: 1974557513}
   - component: {fileID: 1974557516}
   - component: {fileID: 1974557517}
-  - component: {fileID: 1974557518}
   - component: {fileID: 1974557519}
+  - component: {fileID: 1974557520}
   m_Layer: 0
   m_Name: Gravity Toggle
   m_TagString: Untagged
@@ -9396,8 +9396,23 @@ MonoBehaviour:
   - {fileID: 1917957717}
   - {fileID: 1087980940}
   - {fileID: 1999130159}
---- !u!58 &1974557518
-CircleCollider2D:
+--- !u!114 &1974557519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974557512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf501d150f5ac5b47bf1728fde7cce6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBrightness: 0.5
+  maxBrightness: 1
+  speed: 3.5
+--- !u!61 &1974557520
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9428,24 +9443,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0000019073486}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.49999997
---- !u!114 &1974557519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974557512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf501d150f5ac5b47bf1728fde7cce6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minBrightness: 0.5
-  maxBrightness: 1
-  speed: 3.5
+  m_Size: {x: 5.12, y: 5.12}
+  m_EdgeRadius: 0
 --- !u!1 &1976550653
 GameObject:
   m_ObjectHideFlags: 0

@@ -125,7 +125,6 @@ public class PlayerKiller : MonoBehaviour
             Debug.Log($"Crusher absolute vertical velocity: {crusherVelocity}");
             return crusherVelocity >= minCrusherVelocity;
         }
-
         return false;
     }
 
@@ -156,7 +155,6 @@ public class PlayerKiller : MonoBehaviour
             Debug.Log($"Crusher absolute velocity: {crusherVelocity}");
             return crusherVelocity >= minCrusherVelocity; //returns true 
         }
-
         return false;
     }
 
@@ -206,7 +204,6 @@ public class PlayerKiller : MonoBehaviour
                 rightTouchingTag = isTouching ? touchingTag : "";
                 break;
         }
-
         CheckForCrush();
     }
 
@@ -285,7 +282,6 @@ public class PlayerKiller : MonoBehaviour
             mainCamera.orthographicSize = originalCameraSize;
         }
 
-        Time.timeScale = 1;
         deathMessageUI.SetActive(false);
         RestartGame();
         isRespawning = false;
