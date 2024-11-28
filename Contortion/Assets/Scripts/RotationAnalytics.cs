@@ -64,8 +64,8 @@ public class RotationAnalytics : MonoBehaviour
     //private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsTESTING.json";
 
     // //UNCOMMENT THIS WHEN BUILDING
-    // private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsVersion1.json";
-    private string firebaseURL = ""; // testing locally
+    private string firebaseURL = "https://contortion-6c4d5-default-rtdb.firebaseio.com/rotationAnalyticsGold.json";
+    // private string firebaseURL = ""; // testing locally
 
     void OnEnable()
     {
