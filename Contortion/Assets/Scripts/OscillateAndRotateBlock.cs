@@ -10,6 +10,7 @@ public class OscillateAndRotateBlock : MonoBehaviour
 
     public GameObject r;
     public RotatePlayArea rotatePlayArea;
+    private Transform playerOriginalParent;
     void Start()
     {
         startPosition = transform.position;
@@ -45,6 +46,26 @@ public class OscillateAndRotateBlock : MonoBehaviour
             // Move the object in its local "right" direction, transformed to world space
             Vector3 moveDirection = transform.TransformDirection(Vector3.right) * oscillation;
             transform.position = startPosition + moveDirection;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerOriginalParent = collision.transform.parent;
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+
+            collision.transform.SetParent(playerOriginalParent);
         }
     }
 }
