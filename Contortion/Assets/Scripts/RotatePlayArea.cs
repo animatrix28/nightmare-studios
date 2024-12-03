@@ -8,10 +8,14 @@ public class RotatePlayArea : MonoBehaviour
 
     private float angleBefore;
 
+    private Vector3 originalScale;
+
     public Rigidbody2D rb;
     public Transform flag;
     public Transform player;
     public static event System.Action OnRotationStart;
+
+
 
     void Update()
     {
@@ -38,6 +42,7 @@ public class RotatePlayArea : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, angle);
         flag.Rotate(Vector3.back * (angle - angleBefore));
         player.Rotate(Vector3.back * (angle - angleBefore));
+
 
         if (Mathf.Approximately(angle, targetAngle))
         {
