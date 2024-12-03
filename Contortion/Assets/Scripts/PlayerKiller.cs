@@ -102,8 +102,8 @@ public class PlayerKiller : MonoBehaviour
     {
         if (!(isTopTouching && isBottomTouching)) return false;
 
-        bool crusherOnTop = (topTouchingTag == "Crusher" && bottomTouchingTag == "Ground") || (topTouchingTag == "Crusher" && bottomTouchingTag == "Crusher");
-        bool crusherOnBottom = (topTouchingTag == "Ground" && bottomTouchingTag == "Crusher") || (topTouchingTag == "Crusher" && bottomTouchingTag == "Crusher");
+        bool crusherOnTop = (topTouchingTag == "Crusher" && bottomTouchingTag == "Ground");
+        bool crusherOnBottom = (topTouchingTag == "Ground" && bottomTouchingTag == "Crusher");
 
         if (!crusherOnTop && !crusherOnBottom) return false;
 
@@ -132,8 +132,8 @@ public class PlayerKiller : MonoBehaviour
     {
         if (!(isLeftTouching && isRightTouching)) return false;
 
-        bool crusherOnLeft = (leftTouchingTag == "Crusher" && rightTouchingTag == "Ground") || (leftTouchingTag == "Crusher" && rightTouchingTag == "Crusher");
-        bool crusherOnRight = (leftTouchingTag == "Ground" && rightTouchingTag == "Crusher") || (leftTouchingTag == "Crusher" && rightTouchingTag == "Crusher");
+        bool crusherOnLeft = (leftTouchingTag == "Crusher" && rightTouchingTag == "Ground");
+        bool crusherOnRight = (leftTouchingTag == "Ground" && rightTouchingTag == "Crusher");
 
         if (!crusherOnLeft && !crusherOnRight) return false;
 
