@@ -1277,7 +1277,7 @@ Transform:
   m_GameObject: {fileID: 256719368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.107, y: -0.375, z: 0}
+  m_LocalPosition: {x: 0.044, y: -0.299, z: 0}
   m_LocalScale: {x: 0.10839135, y: 0.07629705, z: 0.13102566}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1343,7 +1343,7 @@ Rigidbody2D:
   m_Mass: 2000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: -1.1
+  m_GravityScale: -1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1419,8 +1419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotatePlayArea: {fileID: 0}
-  r: {fileID: 0}
+  rotatePlayArea: {fileID: 1223339469}
+  r: {fileID: 256719368}
 --- !u!1 &363894876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,7 +4143,7 @@ Transform:
   m_GameObject: {fileID: 1153761501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.256, y: -0.423, z: 0}
+  m_LocalPosition: {x: 0.072, y: -0.423, z: 0}
   m_LocalScale: {x: 0.1567485, y: 0.07629705, z: 0.13102566}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4161,8 +4161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotatePlayArea: {fileID: 0}
-  r: {fileID: 0}
+  rotatePlayArea: {fileID: 1223339469}
+  r: {fileID: 1153761501}
 --- !u!1 &1223339466
 GameObject:
   m_ObjectHideFlags: 0
