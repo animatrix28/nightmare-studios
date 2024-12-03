@@ -8,6 +8,8 @@ public class OscillateAndRotateBlock : MonoBehaviour
 
     private Vector3 startPosition;
 
+    private Vector3 originalScale;
+
     public GameObject r;
     public RotatePlayArea rotatePlayArea;
     private Transform playerOriginalParent;
@@ -49,12 +51,16 @@ public class OscillateAndRotateBlock : MonoBehaviour
         }
     }
 
+    // Store the original scale
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            originalScale = collision.transform.localScale;
             playerOriginalParent = collision.transform.parent;
-            collision.transform.SetParent(transform, worldPositionStays: true);
+            collision.transform.SetParent(transform);
+            collision.transform.localScale = originalScale;
         }
     }
 
@@ -62,7 +68,8 @@ public class OscillateAndRotateBlock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(playerOriginalParent, worldPositionStays: true);
+            collision.transform.SetParent(playerOriginalParent);
+            collision.transform.localScale = originalScale;
         }
     }
 }
