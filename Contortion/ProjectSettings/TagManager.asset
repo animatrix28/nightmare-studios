@@ -9,6 +9,7 @@ TagManager:
   - Spikes
   - Exit_Level_1
   - Exit_Level_3
+  - Reverse_Crusher
   layers:
   - Default
   - TransparentFX

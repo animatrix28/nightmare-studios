@@ -5,10 +5,12 @@ public class TogglePositionLock : MonoBehaviour
     private Rigidbody2D rb;
     public RotatePlayArea rotatePlayArea;
     public GameObject r;
+    private ReverseGravity reverseGravity;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        reverseGravity = GetComponent<ReverseGravity>();
 
         if (r != null)
         {
@@ -23,8 +25,19 @@ public class TogglePositionLock : MonoBehaviour
 
     void Update()
     {
-        if (rotatePlayArea != null)
+        if (rotatePlayArea == null) return;
+
+        bool isReverseCrusher = rb.gameObject.CompareTag("Reverse_Crusher") && reverseGravity != null;
+
+        if (isReverseCrusher)
         {
+
+            bool shouldFreeze = rotatePlayArea.isRotating || !reverseGravity.IsToggleUsed;
+            rb.constraints = shouldFreeze ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.None;
+        }
+        else
+        {
+
             if (rotatePlayArea.isRotating)
             {
                 rb.constraints = RigidbodyConstraints2D.None;

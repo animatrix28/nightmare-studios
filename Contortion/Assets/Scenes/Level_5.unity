@@ -6888,7 +6888,7 @@ GameObject:
   - component: {fileID: 1087980941}
   m_Layer: 0
   m_Name: Crusher 2
-  m_TagString: Crusher
+  m_TagString: Reverse_Crusher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7022,7 +7022,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.99215686, g: 0.41568628, b: 0, a: 1}
+  m_Color: {r: 0.7505868, g: 0, b: 0.99215686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7044,6 +7044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ff097497bf9e842a922b9fb94ffd06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsToggleUsed: 0
 --- !u!114 &1087980941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7056,8 +7057,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotatePlayArea: {fileID: 0}
-  r: {fileID: 0}
+  rotatePlayArea: {fileID: 1223339469}
+  r: {fileID: 1087980934}
 --- !u!1 &1100931710
 GameObject:
   m_ObjectHideFlags: 0
@@ -14585,7 +14586,6 @@ GameObject:
   - component: {fileID: 1917957716}
   - component: {fileID: 1917957715}
   - component: {fileID: 1917957714}
-  - component: {fileID: 1917957717}
   - component: {fileID: 1917957718}
   m_Layer: 0
   m_Name: Crusher 1
@@ -14733,18 +14733,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1917957717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917957711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ff097497bf9e842a922b9fb94ffd06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1917957718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15152,7 +15140,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4177c1c61969c1a48988486676f35285, type: 3}
-  m_Color: {r: 0.99215686, g: 0.41568628, b: 0, a: 1}
+  m_Color: {r: 0.87158096, g: 0, b: 0.99215686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15175,7 +15163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityAffectedBlocks:
-  - {fileID: 1917957717}
+  - {fileID: 0}
   - {fileID: 1087980940}
   - {fileID: 0}
 --- !u!114 &1974557519
