@@ -51,21 +51,18 @@ public class OscillateAndRotateBlock : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.CompareTag("Player"))
         {
             playerOriginalParent = collision.transform.parent;
-            collision.transform.SetParent(transform);
+            collision.transform.SetParent(transform, worldPositionStays: true);
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-
         if (collision.gameObject.CompareTag("Player"))
         {
-
-            collision.transform.SetParent(playerOriginalParent);
+            collision.transform.SetParent(playerOriginalParent, worldPositionStays: true);
         }
     }
 }
