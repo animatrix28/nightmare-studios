@@ -34,6 +34,20 @@ public class TogglePositionLock : MonoBehaviour
 
             bool shouldFreeze = rotatePlayArea.isRotating || !reverseGravity.IsToggleUsed;
             rb.constraints = shouldFreeze ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.None;
+
+            if (rotatePlayArea.isRotating)
+            {
+                if (!reverseGravity.IsToggleUsed)
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                }
+                else
+                {
+
+
+                }
+
+            }
         }
         else
         {
