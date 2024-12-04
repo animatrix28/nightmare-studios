@@ -79,24 +79,7 @@ public class PlayerKiller : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        playerRigidbody = GetComponent<Rigidbody2D>();
 
-        // Store camera references
-        mainCamera = Camera.main;
-        if (mainCamera != null)
-        {
-            originalCameraPosition = mainCamera.transform.position;
-            originalCameraSize = mainCamera.orthographicSize;
-        }
-
-        // Create sensors if not set in inspector
-        if (topSensor == null) CreateSensor("TopSensor", new Vector2(0, 1f), new Vector2(0.2f, 0.1f));
-        if (bottomSensor == null) CreateSensor("BottomSensor", new Vector2(0, -1f), new Vector2(0.2f, 0.1f));
-        if (leftSensor == null) CreateSensor("LeftSensor", new Vector2(-1f, 0), new Vector2(0.1f, 0.2f));
-        if (rightSensor == null) CreateSensor("RightSensor", new Vector2(1f, 0), new Vector2(0.1f, 0.2f));
-    }
 
     bool CheckVerticalCrush()
     {
@@ -158,10 +141,34 @@ public class PlayerKiller : MonoBehaviour
         return false;
     }
 
+    void Start()
+    {
+        playerRigidbody = GetComponent<Rigidbody2D>();
+        CapsuleCollider2D capsuleCollider = GetComponent<CapsuleCollider2D>();
+        float colliderHeight = capsuleCollider.bounds.size.y;
+        float colliderWidth = capsuleCollider.bounds.size.x;
+
+        // Store camera references
+        mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            originalCameraPosition = mainCamera.transform.position;
+            originalCameraSize = mainCamera.orthographicSize;
+        }
+
+        // Create sensors right at the collider edges
+        if (topSensor == null) CreateSensor("TopSensor", new Vector2(0, colliderHeight / 2), new Vector2(0.3f, 0.1f));
+        if (bottomSensor == null) CreateSensor("BottomSensor", new Vector2(0, -colliderHeight / 2), new Vector2(0.3f, 0.1f));
+        if (leftSensor == null) CreateSensor("LeftSensor", new Vector2(-colliderWidth / 2, 0), new Vector2(0.1f, 0.3f));
+        if (rightSensor == null) CreateSensor("RightSensor", new Vector2(colliderWidth / 2, 0), new Vector2(0.1f, 0.3f));
+    }
+
     void CreateSensor(string name, Vector2 position, Vector2 size)
     {
         GameObject sensor = new GameObject(name);
         sensor.transform.parent = transform;
+
+        // Position the sensor exactly at the edge of the collider
         sensor.transform.localPosition = position;
 
         BoxCollider2D collider = sensor.AddComponent<BoxCollider2D>();
@@ -212,7 +219,7 @@ public class PlayerKiller : MonoBehaviour
         bool verticalCrush = CheckVerticalCrush();
         bool horizontalCrush = CheckHorizontalCrush();
 
-        if (verticalCrush || horizontalCrush)
+        if (verticalCrush) //|| horizontalCrush)
         {
             deathPosition = transform.position;
             CauseOfDeath = "Crusher";
