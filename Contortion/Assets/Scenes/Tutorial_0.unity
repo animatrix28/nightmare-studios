@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Intensity: 4.45
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 00000000ad65e4b2
+  m_ApplyToSortingLayers: 00000000ad65e4b22b9de83f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1560,8 +1560,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1072209195
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &910798017
 RectTransform:
@@ -2490,11 +2490,11 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.74
-  m_Color: {r: 0.9386792, g: 0.9754717, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 1, b: 0.9640867, a: 1}
   m_Intensity: 5.06
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 00000000ad65e4b293b81676
+  m_ApplyToSortingLayers: 00000000ad65e4b293b816762b9de83f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_Intensity: 8.76
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000ad65e4b2
+  m_ApplyToSortingLayers: 00000000ad65e4b22b9de83f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3438,7 +3438,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
