@@ -8,17 +8,20 @@ public class GravityToggleColor : MonoBehaviour
     private float timer = 0.0f;
 
     private SpriteRenderer spriteRenderer;
+    private Color spriteColor;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteColor = spriteRenderer.color;
+
     }
 
     void Update()
     {
         if (spriteRenderer != null)
         {
-            spriteRenderer.color = new Color(0.8326389f, 0f, 0.9921569f) * Mathf.Lerp(minBrightness, maxBrightness, (Mathf.Sin(timer) + 1) / 2);
+            spriteRenderer.color = spriteColor * Mathf.Lerp(minBrightness, maxBrightness, (Mathf.Sin(timer) + 1) / 2);
             timer += Time.deltaTime * speed;
         }
     }
