@@ -283,16 +283,12 @@ public class PlayerKiller : MonoBehaviour
                 mainCamera.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
                 mainCamera.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
 
-                if (CauseOfDeath == "Crusher")
-                {
-                    player.transform.localScale = new Vector3(player.transform.localScale.x, 0.02f, player.transform.localScale.z);
-                }
-                else if (CauseOfDeath == "Spikes")
-                {
-                    SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
-                    playerRenderer.color = Color.red;
 
-                }
+
+                SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
+                playerRenderer.color = Color.red;
+
+
 
 
 
@@ -309,7 +305,7 @@ public class PlayerKiller : MonoBehaviour
         {
             mainCamera.transform.position = originalCameraPosition;
             mainCamera.orthographicSize = originalCameraSize;
-            player.transform.localScale = playerSize;
+
         }
 
         deathMessageUI.SetActive(false);
