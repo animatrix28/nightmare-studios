@@ -37,7 +37,7 @@ public class LevelSelector : MonoBehaviour
         // Map dropdown indices to scene names
         switch (index)
         {
-            case 0: return "Tutorial_1";
+            case 0: return "Tutorial_0";
             case 1: return "Level_1";
             case 2: return "Level_2";
             case 3: return "Level_3";

@@ -14,18 +14,16 @@ public class LevelChange : MonoBehaviour
 
     private void ChangeLevel()
     {
+
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
+
         // Debug.Log(currentSceneIndex+"wefwbijuwbi");
-        if (currentSceneIndex == 3)
-        {
-            PlayerPrefs.SetInt("TutorialCompleted", 1);  // Save completion status
-            PlayerPrefs.Save(); // Ensure data is saved
-        }
-        if (currentSceneIndex < 3)
+
+        if (currentSceneIndex <= 4)
         {
 
-            string nextSceneName = $"Tutorial_{currentSceneIndex + 1}";
+            string nextSceneName = $"Tutorial_{currentSceneIndex}";
             // Debug.Log(nextSceneIndex);
             LevelStatus = "Unknown";
             // Debug.Log("CurrentSCENE: "+currentSceneIndex+" NextScence: "+nextSceneIndex);
@@ -36,12 +34,24 @@ public class LevelChange : MonoBehaviour
             SceneManager.LoadScene(nextSceneName);
         }
         // else if (currentSceneIndex < SceneManager.sceneCountInBuildSettings - 1)
-        else if (currentSceneIndex < 9)
+        else if (currentSceneIndex < 10)
         {
-            string nextSceneName = $"Level_{currentSceneIndex - 2}";
-            // Debug.Log(currentSceneIndex);
-            LevelStatus = $"Level_{currentSceneIndex - 3}" + "_cleared";
-            SceneManager.LoadScene(nextSceneName);
+            if (currentSceneIndex == 5)
+            {
+                PlayerPrefs.SetInt("TutorialCompleted", 1);  // Save completion status
+                PlayerPrefs.Save(); // Ensure data is saved
+
+                Debug.Log("currentSceneIndex");
+                string nextSceneName = "Level_1";
+                SceneManager.LoadScene(nextSceneName);
+            }
+            else
+            {
+                string nextSceneName = $"Level_{currentSceneIndex - 3}";
+                // Debug.Log(currentSceneIndex);
+                LevelStatus = $"Level_{currentSceneIndex - 4}" + "_cleared";
+                SceneManager.LoadScene(nextSceneName);
+            }
 
         }
         else
@@ -49,6 +59,7 @@ public class LevelChange : MonoBehaviour
             LevelStatus = "Level_6_cleared";
             SceneManager.LoadScene("PlayAgain");
         }
+
     }
 
     public void PlayAgain()
