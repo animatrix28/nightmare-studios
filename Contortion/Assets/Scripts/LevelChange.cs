@@ -20,7 +20,7 @@ public class LevelChange : MonoBehaviour
 
         // Debug.Log(currentSceneIndex+"wefwbijuwbi");
 
-        if (currentSceneIndex <= 4)
+        if (currentSceneIndex < 4)
         {
 
             string nextSceneName = $"Tutorial_{currentSceneIndex}";
@@ -33,25 +33,25 @@ public class LevelChange : MonoBehaviour
 
             SceneManager.LoadScene(nextSceneName);
         }
+        else if (currentSceneIndex == 4)
+        {
+            PlayerPrefs.SetInt("TutorialCompleted", 1);  // Save completion status
+            PlayerPrefs.Save(); // Ensure data is saved
+
+            Debug.Log("currentSceneIndex");
+            string nextSceneName = "Level_1";
+            SceneManager.LoadScene(nextSceneName);
+        }
         // else if (currentSceneIndex < SceneManager.sceneCountInBuildSettings - 1)
         else if (currentSceneIndex < 10)
         {
-            if (currentSceneIndex == 5)
-            {
-                PlayerPrefs.SetInt("TutorialCompleted", 1);  // Save completion status
-                PlayerPrefs.Save(); // Ensure data is saved
 
-                Debug.Log("currentSceneIndex");
-                string nextSceneName = "Level_1";
-                SceneManager.LoadScene(nextSceneName);
-            }
-            else
-            {
-                string nextSceneName = $"Level_{currentSceneIndex - 3}";
-                // Debug.Log(currentSceneIndex);
-                LevelStatus = $"Level_{currentSceneIndex - 4}" + "_cleared";
-                SceneManager.LoadScene(nextSceneName);
-            }
+
+            string nextSceneName = $"Level_{currentSceneIndex - 3}";
+            // Debug.Log(currentSceneIndex);
+            LevelStatus = $"Level_{currentSceneIndex - 4}" + "_cleared";
+            SceneManager.LoadScene(nextSceneName);
+
 
         }
         else
