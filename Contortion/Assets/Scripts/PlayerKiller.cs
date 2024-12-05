@@ -287,6 +287,12 @@ public class PlayerKiller : MonoBehaviour
                 {
                     player.transform.localScale = new Vector3(player.transform.localScale.x, 0.02f, player.transform.localScale.z);
                 }
+                else if (CauseOfDeath == "Spikes")
+                {
+                    SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
+                    playerRenderer.color = Color.red;
+
+                }
 
 
 
