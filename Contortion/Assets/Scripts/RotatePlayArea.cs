@@ -46,7 +46,10 @@ public class RotatePlayArea : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, angle);
         flag.Rotate(Vector3.back * (angle - angleBefore));
         player.Rotate(Vector3.back * (angle - angleBefore));
-        skull.Rotate(Vector3.back * (angle - angleBefore));
+        if (skull)
+        {
+            skull.Rotate(Vector3.back * (angle - angleBefore));
+        }
 
 
 

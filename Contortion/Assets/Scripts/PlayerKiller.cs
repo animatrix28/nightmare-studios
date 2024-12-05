@@ -259,7 +259,7 @@ public class PlayerKiller : MonoBehaviour
         Time.timeScale = 0;
         deathMessageUI.SetActive(true);
 
-        // Camera zoom
+
         if (mainCamera != null)
         {
             float elapsedTime = 0f;
@@ -276,13 +276,16 @@ public class PlayerKiller : MonoBehaviour
                 mainCamera.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
                 mainCamera.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
 
+
                 yield return null;
             }
+
         }
+
 
         yield return new WaitForSecondsRealtime(5);
 
-        // Reset camera
+
         if (mainCamera != null)
         {
             mainCamera.transform.position = originalCameraPosition;
