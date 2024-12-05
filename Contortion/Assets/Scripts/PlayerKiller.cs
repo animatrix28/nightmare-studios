@@ -27,6 +27,8 @@ public class PlayerKiller : MonoBehaviour
     private float originalCameraSize;
     private Vector3 deathPosition;
 
+    private Transform player;
+
     // Sensor states
     private bool isTopTouching = false;
     private bool isBottomTouching = false;
@@ -37,6 +39,8 @@ public class PlayerKiller : MonoBehaviour
     private string bottomTouchingTag = "";
     private string leftTouchingTag = "";
     private string rightTouchingTag = "";
+
+    private Vector3 playerSize;
 
     private Dictionary<GameObject, Rigidbody2D> crusherRigidbodies = new Dictionary<GameObject, Rigidbody2D>();
     private Rigidbody2D playerRigidbody;
@@ -144,6 +148,9 @@ public class PlayerKiller : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        player = GetComponent<Transform>();
+        playerSize = player.transform.localScale;
+
         CapsuleCollider2D capsuleCollider = GetComponent<CapsuleCollider2D>();
         float colliderHeight = capsuleCollider.bounds.size.y;
         float colliderWidth = capsuleCollider.bounds.size.x;
@@ -259,7 +266,7 @@ public class PlayerKiller : MonoBehaviour
         Time.timeScale = 0;
         deathMessageUI.SetActive(true);
 
-        // Camera zoom
+
         if (mainCamera != null)
         {
             float elapsedTime = 0f;
@@ -276,17 +283,29 @@ public class PlayerKiller : MonoBehaviour
                 mainCamera.transform.position = Vector3.Lerp(startPosition, targetPosition, t);
                 mainCamera.orthographicSize = Mathf.Lerp(startSize, targetSize, t);
 
+
+
+                SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
+                playerRenderer.color = Color.red;
+
+
+
+
+
                 yield return null;
             }
+
         }
+
 
         yield return new WaitForSecondsRealtime(5);
 
-        // Reset camera
+
         if (mainCamera != null)
         {
             mainCamera.transform.position = originalCameraPosition;
             mainCamera.orthographicSize = originalCameraSize;
+
         }
 
         deathMessageUI.SetActive(false);
