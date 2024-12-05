@@ -14010,6 +14010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 250
   isRotating: 0
+  skull: {fileID: 1726944287}
   rb: {fileID: 310388632}
   flag: {fileID: 1749318779}
   player: {fileID: 310388627}
@@ -18155,14 +18156,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726944286}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.445, y: -0.427, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.0100004235, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.43833, y: -0.41889, z: 0}
+  m_LocalScale: {x: 0.0126054995, y: 0.013166557, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1582474359}
   m_Father: {fileID: 1223339468}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1726944288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18280,7 +18281,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4177c1c61969c1a48988486676f35285, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10850a00635674e2d978102e33a88153, type: 3}
   m_Color: {r: 0.007843138, g: 0.99215686, b: 0.99215686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
