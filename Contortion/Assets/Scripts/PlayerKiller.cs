@@ -3,12 +3,19 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
+
+
 public class PlayerKiller : MonoBehaviour
 {
     [Header("Death and Respawn")]
     public GameObject deathMessageUI;
+    public GameObject pauseMenuCanvas;
+
+
     public static string CauseOfDeath = "Unknown";
     private bool isRespawning = false;
+
+
 
     [Header("Crush Sensors")]
     public GameObject topSensor;
@@ -46,6 +53,8 @@ public class PlayerKiller : MonoBehaviour
     private Dictionary<GameObject, Rigidbody2D> crusherRigidbodies = new Dictionary<GameObject, Rigidbody2D>();
     private Rigidbody2D playerRigidbody;
 
+
+
     private class CrushSensor : MonoBehaviour
     {
         private bool isStaying;
@@ -54,6 +63,7 @@ public class PlayerKiller : MonoBehaviour
         void Start()
         {
             parentScript = GetComponentInParent<PlayerKiller>();
+
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -311,8 +321,13 @@ public class PlayerKiller : MonoBehaviour
     IEnumerator RespawnWithDelay()
     {
         isRespawning = true;
+        pauseMenuCanvas.SetActive(false);
         Time.timeScale = 0;
         deathMessageUI.SetActive(true);
+
+
+
+
 
 
         if (mainCamera != null)
@@ -346,7 +361,7 @@ public class PlayerKiller : MonoBehaviour
         }
 
 
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(3);
 
 
         if (mainCamera != null)
@@ -357,6 +372,7 @@ public class PlayerKiller : MonoBehaviour
         }
 
         deathMessageUI.SetActive(false);
+        pauseMenuCanvas.SetActive(true);
         RestartGame();
         isRespawning = false;
 
