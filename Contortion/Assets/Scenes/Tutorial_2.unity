@@ -5800,7 +5800,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: -3
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9593,7 +9593,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: -3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -10720,7 +10720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.1425018, y: 1.45}
+  m_AnchoredPosition: {x: -1.1425018, y: 1.4499998}
   m_SizeDelta: {x: -2.29, y: -6.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109894475
