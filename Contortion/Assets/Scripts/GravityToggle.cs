@@ -30,7 +30,22 @@ public class GravityToggle : MonoBehaviour
                 }
             }
             SaveState();
-            Destroy(gameObject);
+
+
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            UnityEngine.Rendering.Universal.Light2D light2D = GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
+            if (light2D != null)
+            {
+                light2D.enabled = false;
+            }
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.enabled = false;
+
+            }
+
+
+            GetComponent<Collider2D>().enabled = false;
         }
     }
     private void SaveState()

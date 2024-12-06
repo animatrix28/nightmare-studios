@@ -22,6 +22,7 @@ public class LightPulse : MonoBehaviour
         if (Time.time > nextFlickerTime)
         {
             // Get a random value between 0 and 1
+
             float randomValue = Random.value;
             light2D.intensity = Mathf.Lerp(minIntensity, maxIntensity, randomValue);
 

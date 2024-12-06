@@ -7,10 +7,13 @@ public class TogglePositionLock : MonoBehaviour
     public GameObject r;
     private ReverseGravity reverseGravity;
 
+    private TogglePositionLock togglePositionLock;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         reverseGravity = GetComponent<ReverseGravity>();
+
+
 
         if (r != null)
         {
@@ -21,6 +24,7 @@ public class TogglePositionLock : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints2D.None;
         }
+
     }
 
     void Update()
@@ -34,6 +38,20 @@ public class TogglePositionLock : MonoBehaviour
 
             bool shouldFreeze = rotatePlayArea.isRotating || !reverseGravity.IsToggleUsed;
             rb.constraints = shouldFreeze ? RigidbodyConstraints2D.FreezeAll : RigidbodyConstraints2D.None;
+
+            if (rotatePlayArea.isRotating)
+            {
+                if (!reverseGravity.IsToggleUsed)
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                }
+                else
+                {
+
+
+                }
+
+            }
         }
         else
         {
@@ -48,4 +66,6 @@ public class TogglePositionLock : MonoBehaviour
             }
         }
     }
+
+
 }

@@ -10,9 +10,17 @@ public class RotatePlayArea : MonoBehaviour
 
     private Vector3 originalScale;
 
+    public Transform skull;
+
     public Rigidbody2D rb;
     public Transform flag;
     public Transform player;
+
+    public Transform Fkey;
+
+
+
+
     public static event System.Action OnRotationStart;
 
 
@@ -42,6 +50,17 @@ public class RotatePlayArea : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, angle);
         flag.Rotate(Vector3.back * (angle - angleBefore));
         player.Rotate(Vector3.back * (angle - angleBefore));
+        if (skull)
+        {
+            skull.Rotate(Vector3.back * (angle - angleBefore));
+        }
+
+        if (Fkey)
+        {
+            Fkey.Rotate(Vector3.back * (angle - angleBefore));
+
+        }
+
 
 
         if (Mathf.Approximately(angle, targetAngle))
@@ -50,3 +69,4 @@ public class RotatePlayArea : MonoBehaviour
         }
     }
 }
+

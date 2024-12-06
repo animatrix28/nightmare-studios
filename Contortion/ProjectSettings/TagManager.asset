@@ -56,3 +56,6 @@ TagManager:
   - name: Death Text
     uniqueID: 1235440073
     locked: 0
+  - name: Pause Menu
+    uniqueID: 1072209195
+    locked: 0
