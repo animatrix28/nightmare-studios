@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 727019120}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 959046917}
 --- !u!114 &170966406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6990,7 +6990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 727019120}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 959046917}
 --- !u!114 &492906454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23089,7 +23089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 727019120}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 959046917}
 --- !u!114 &2114890368
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1179509781}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 412524099}
 --- !u!114 &358373672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d133456aa704e940b2f4d91c10e3c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1752898302}
+  pauseMenuUI: {fileID: 1179509781}
   pauseButton: {fileID: 412524099}
 --- !u!114 &412524102
 MonoBehaviour:
@@ -3823,7 +3823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1179509781}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 412524099}
 --- !u!114 &723713275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6537,7 +6537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1179509781}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 412524099}
 --- !u!114 &1129251220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6859,7 +6859,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -6870,7 +6870,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 1072209195
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1179509785
 RectTransform:
@@ -10963,7 +10963,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
