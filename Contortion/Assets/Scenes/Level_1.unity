@@ -633,13 +633,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256719368}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0.03795, y: -0.30724, z: 0}
   m_LocalScale: {x: 0.12421989, y: 0.12894432, z: 0.16923483}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1223339468}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!50 &256719372
 Rigidbody2D:
   serializedVersion: 4
@@ -3766,7 +3766,7 @@ MonoBehaviour:
   bottomSensor: {fileID: 0}
   leftSensor: {fileID: 0}
   rightSensor: {fileID: 0}
-  minCrusherVelocity: 3
+  minCrusherVelocity: 2.5
   hminCrusherVelocity: 2
   zoomAmount: 4
   zoomSpeed: 2
