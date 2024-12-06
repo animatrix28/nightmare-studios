@@ -5988,7 +5988,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: -2
+  m_GravityScale: -3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -6040,7 +6040,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d0aaf3031960bc54f914c1e628423f00, type: 3}
   m_Color: {r: 0.9921569, g: 0.4156863, b: 0, a: 1}
   m_FlipX: 0
@@ -7306,6 +7306,7 @@ MonoBehaviour:
   rb: {fileID: 1806084360}
   flag: {fileID: 1609143104}
   player: {fileID: 1806084355}
+  Fkey: {fileID: 0}
 --- !u!1 &1229404720
 GameObject:
   m_ObjectHideFlags: 0
@@ -10024,7 +10025,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d0aaf3031960bc54f914c1e628423f00, type: 3}
   m_Color: {r: 0.9921569, g: 0.4156863, b: 0, a: 1}
   m_FlipX: 0

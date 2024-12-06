@@ -6588,6 +6588,7 @@ MonoBehaviour:
   rb: {fileID: 436627363}
   flag: {fileID: 213771945}
   player: {fileID: 436627358}
+  Fkey: {fileID: 0}
 --- !u!1 &1262203381
 GameObject:
   m_ObjectHideFlags: 0

@@ -4923,7 +4923,7 @@ Transform:
   m_GameObject: {fileID: 983539952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.02, y: -0.283, z: 0}
+  m_LocalPosition: {x: 0.102, y: -0.283, z: 0}
   m_LocalScale: {x: 0.3724958, y: 0.038148526, z: 0.13102566}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6330,6 +6330,7 @@ MonoBehaviour:
   rb: {fileID: 2025065061}
   flag: {fileID: 1389680952}
   player: {fileID: 2025065056}
+  Fkey: {fileID: 0}
 --- !u!1 &1251355169
 GameObject:
   m_ObjectHideFlags: 0
@@ -7346,8 +7347,8 @@ Transform:
   m_GameObject: {fileID: 1471078253}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26957, y: -0.332, z: 0}
-  m_LocalScale: {x: 0.47221208, y: -0.26596007, z: 0.13102566}
+  m_LocalPosition: {x: 0.31124, y: -0.332, z: 0}
+  m_LocalScale: {x: 0.38886663, y: -0.26596007, z: 0.13102566}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223339468}

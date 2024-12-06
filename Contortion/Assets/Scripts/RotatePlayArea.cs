@@ -16,6 +16,10 @@ public class RotatePlayArea : MonoBehaviour
     public Transform flag;
     public Transform player;
 
+    public Transform Fkey;
+
+
+
 
     public static event System.Action OnRotationStart;
 
@@ -49,6 +53,12 @@ public class RotatePlayArea : MonoBehaviour
         if (skull)
         {
             skull.Rotate(Vector3.back * (angle - angleBefore));
+        }
+
+        if (Fkey)
+        {
+            Fkey.Rotate(Vector3.back * (angle - angleBefore));
+
         }
 
 
