@@ -633,13 +633,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256719368}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0.03795, y: -0.30724, z: 0}
   m_LocalScale: {x: 0.12421989, y: 0.12894432, z: 0.16923483}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1223339468}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!50 &256719372
 Rigidbody2D:
   serializedVersion: 4
@@ -666,7 +666,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &256719373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3766,7 +3766,7 @@ MonoBehaviour:
   bottomSensor: {fileID: 0}
   leftSensor: {fileID: 0}
   rightSensor: {fileID: 0}
-  minCrusherVelocity: 3
+  minCrusherVelocity: 2.5
   hminCrusherVelocity: 2
   zoomAmount: 4
   zoomSpeed: 2
@@ -4339,7 +4339,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1153761504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4474,6 +4474,7 @@ PolygonCollider2D:
       - {x: 0.26833335, y: -0.025}
       - {x: 0.305, y: 0.09833334}
       - {x: 0.30833334, y: 0.105000004}
+      - {x: 0.31491774, y: 0.12933302}
       - {x: 0.30833334, y: 0.15166667}
       - {x: 0.305, y: 0.165}
       - {x: 0.2916667, y: 0.18833333}

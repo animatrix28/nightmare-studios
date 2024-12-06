@@ -212,7 +212,7 @@ public class PlayerKiller : MonoBehaviour
 
 
         // Create sensors right at the collider edges
-        if (topSensor == null) CreateSensor("TopSensor", new Vector2(0f, 0.27f), new Vector2(0.475375444f, 0.128026783f));
+        if (topSensor == null) CreateSensor("TopSensor", new Vector2(0f, 0.27f), new Vector2(0.318402767f, 0.128026783f));
         if (bottomSensor == null) CreateSensor("BottomSensor", new Vector2(0f, -0.3068475f), new Vector2(0.227577209f, 0.0996543318f));
         if (leftSensor == null) CreateSensor("LeftSensor", new Vector2(-0.2320364f, 0f), new Vector2(0.05474677086f, 0.490971088f));
         if (rightSensor == null) CreateSensor("RightSensor", new Vector2(0.2320364f, 0f), new Vector2(0.05476083755f, 0.48587501f));
@@ -324,6 +324,7 @@ public class PlayerKiller : MonoBehaviour
         pauseMenuCanvas.SetActive(false);
         Time.timeScale = 0;
         deathMessageUI.SetActive(true);
+        SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
 
 
 
@@ -348,7 +349,7 @@ public class PlayerKiller : MonoBehaviour
 
 
 
-                SpriteRenderer playerRenderer = GetComponent<SpriteRenderer>();
+
                 playerRenderer.color = Color.red;
 
 
