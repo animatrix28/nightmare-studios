@@ -2495,7 +2495,8 @@ MonoBehaviour:
   bottomSensor: {fileID: 0}
   leftSensor: {fileID: 0}
   rightSensor: {fileID: 0}
-  minCrusherVelocity: 2.5
+  minCrusherVelocity: 1.2
+  hminCrusherVelocity: 1
   zoomAmount: 4
   zoomSpeed: 2
 --- !u!50 &436627363
@@ -2523,7 +2524,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &436627364
 CapsuleCollider2D:
@@ -9483,9 +9484,10 @@ PolygonCollider2D:
       - {x: -0.14500001, y: -0.405}
       - {x: -0.125, y: -0.46166667}
       - {x: -0.12166667, y: -0.49166667}
-      - {x: -0.115, y: -0.495}
-      - {x: 0.105000004, y: -0.495}
-      - {x: 0.115, y: -0.49166667}
+      - {x: -0.116802126, y: -0.49881968}
+      - {x: -0.10840832, y: -0.5003878}
+      - {x: 0.10621735, y: -0.5014502}
+      - {x: 0.1186517, y: -0.49553668}
       - {x: 0.12833333, y: -0.44833335}
       - {x: 0.14166667, y: -0.41500002}
   m_UseDelaunayMesh: 0
@@ -9496,7 +9498,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740104437}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb8c2cdb42a5b4c7d9cde0789a8fd0ec, type: 3}
   m_Name: 
@@ -9515,10 +9517,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9528,7 +9530,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1740104442
 SpriteRenderer:

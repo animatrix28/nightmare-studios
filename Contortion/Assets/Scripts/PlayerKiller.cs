@@ -17,7 +17,8 @@ public class PlayerKiller : MonoBehaviour
     public GameObject rightSensor;
 
     [Header("Crush Settings")]
-    [SerializeField] private float minCrusherVelocity = 2f;
+    [SerializeField] private float minCrusherVelocity;
+    [SerializeField] private float hminCrusherVelocity;
 
     [Header("Death Camera")]
     public float zoomAmount = 4f;
@@ -47,6 +48,7 @@ public class PlayerKiller : MonoBehaviour
 
     private class CrushSensor : MonoBehaviour
     {
+        private bool isStaying;
         private PlayerKiller parentScript;
 
         void Start()
@@ -69,6 +71,9 @@ public class PlayerKiller : MonoBehaviour
                 parentScript.UpdateSensorState(gameObject.name, true, other.tag);
             }
         }
+
+
+
 
         void OnTriggerExit2D(Collider2D other)
         {
@@ -107,10 +112,25 @@ public class PlayerKiller : MonoBehaviour
 
         // Check crusher's absolute velocity when there's ground contact
         if (crusherRb != null)
+
         {
-            float crusherVelocity = Mathf.Abs(crusherRb.velocity.y);
-            Debug.Log($"Crusher absolute vertical velocity: {crusherVelocity}");
-            return crusherVelocity >= minCrusherVelocity;
+
+            if (crusherOnBottom && crusherRb.velocity.y > 0)
+            {
+                float crusherVelocity = Mathf.Abs(crusherRb.velocity.y);
+                Debug.Log($"Crusher absolute vertical velocity: {crusherRb.velocity.y}");
+
+                return crusherVelocity >= minCrusherVelocity;
+            }
+            else if (crusherOnTop && crusherRb.velocity.y < 0)
+            {
+                float crusherVelocity = Mathf.Abs(crusherRb.velocity.y);
+                Debug.Log($"Crusher absolute vertical velocity: {crusherRb.velocity.y}");
+
+                return crusherVelocity >= minCrusherVelocity;
+
+
+            }
         }
         return false;
     }
@@ -139,8 +159,8 @@ public class PlayerKiller : MonoBehaviour
         if (crusherRb != null)
         {
             float crusherVelocity = Mathf.Abs(crusherRb.velocity.x);
-            Debug.Log($"Crusher absolute velocity: {crusherVelocity}");
-            return crusherVelocity >= minCrusherVelocity; //returns true 
+            // Debug.Log($"Crusher absolute velocity: {crusherVelocity}");
+            return crusherVelocity >= hminCrusherVelocity; //returns true 
         }
         return false;
     }
@@ -163,11 +183,12 @@ public class PlayerKiller : MonoBehaviour
             originalCameraSize = mainCamera.orthographicSize;
         }
 
+
         // Create sensors right at the collider edges
-        if (topSensor == null) CreateSensor("TopSensor", new Vector2(0, colliderHeight / 2), new Vector2(0.3f, 0.1f));
-        if (bottomSensor == null) CreateSensor("BottomSensor", new Vector2(0, -colliderHeight / 2), new Vector2(0.3f, 0.1f));
-        if (leftSensor == null) CreateSensor("LeftSensor", new Vector2(-colliderWidth / 2, 0), new Vector2(0.1f, 0.3f));
-        if (rightSensor == null) CreateSensor("RightSensor", new Vector2(colliderWidth / 2, 0), new Vector2(0.1f, 0.3f));
+        if (topSensor == null) CreateSensor("TopSensor", new Vector2(0f, 0.27f), new Vector2(0.475375444f, 0.0996543318f));
+        if (bottomSensor == null) CreateSensor("BottomSensor", new Vector2(0f, -0.3068475f), new Vector2(0.475375444f, 0.0996543318f));
+        if (leftSensor == null) CreateSensor("LeftSensor", new Vector2(-0.2320364f, 0f), new Vector2(0.05474677086f, 0.490971088f));
+        if (rightSensor == null) CreateSensor("RightSensor", new Vector2(0.2320364f, 0f), new Vector2(0.05476083755f, 0.48587501f));
     }
 
     void CreateSensor(string name, Vector2 position, Vector2 size)
@@ -226,12 +247,22 @@ public class PlayerKiller : MonoBehaviour
         bool verticalCrush = CheckVerticalCrush();
         bool horizontalCrush = CheckHorizontalCrush();
 
-        if (verticalCrush) //|| horizontalCrush)
+
+        if (verticalCrush)
         {
             deathPosition = transform.position;
+            // Debug.Log("Vertical");
             CauseOfDeath = "Crusher";
             StartRespawnSequence();
         }
+        // if (horizontalCrush)
+        // {
+        //     deathPosition = transform.position;
+        //     Debug.Log("Horizontal");
+        //     CauseOfDeath = "Crusher";
+        //     StartRespawnSequence();
+
+        // }
     }
 
     void Update()
@@ -311,6 +342,7 @@ public class PlayerKiller : MonoBehaviour
         deathMessageUI.SetActive(false);
         RestartGame();
         isRespawning = false;
+
     }
 
     public void RestartGame()
